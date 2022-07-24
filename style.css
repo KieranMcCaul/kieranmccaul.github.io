@@ -21,6 +21,7 @@
   --large: 7vw;
   --half: 50vw;
   --full: 100vw;
+  --autoSize: calc(12px + 1.5vw);
 }
 
 #rightText,
