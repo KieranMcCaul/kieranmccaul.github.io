@@ -176,7 +176,7 @@ button {
   }
 }
 
-button:focus ~ a {
+button:active ~ a {
   opacity: 1;
   animation: navAnimation 0.5s linear 0s forwards;
 }
