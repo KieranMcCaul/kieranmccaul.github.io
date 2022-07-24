@@ -94,7 +94,7 @@ body {
   height: calc(var(--half) / 2);
 }
 
-button {
+.button {
   font-size: var(--small);
   color: var(--darkColour);
   text-align: right;
