@@ -177,7 +177,7 @@ button {
 }
 
 button:active,
-button:hover ~ a {
+button:hover ~ a + #background {
   opacity: 1;
   animation: navAnimation 0.5s linear 0s forwards;
 }
