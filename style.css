@@ -8,7 +8,7 @@
   font-weight: bold;
   letter-spacing: 0.25vw;
   overflow: hidden;
-font-size:calc(var(--medium) * 1.5vw);
+font-size:calc(var(--large) * 1.5vw);
 
 }
 
