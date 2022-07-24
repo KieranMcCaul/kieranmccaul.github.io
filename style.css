@@ -176,12 +176,13 @@ button {
   }
 }
 
+button:active,
 button:hover ~ a {
   opacity: 1;
   animation: navAnimation 0.5s linear 0s forwards;
 }
 a:hover,
-button:focus {
+button:focus  {
   text-shadow: var(--lightColour) 0.25vw 0.25vw 0;
 }
 
