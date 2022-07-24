@@ -84,7 +84,7 @@ body {
   background-color: var(--darkColour);
   outline: calc(var(--small) / 4) solid var(--lightColour);
   width: var(--half);
-  height: var(--full);
+  height: 100%;
 }
 /* --------------------------------- */
 
