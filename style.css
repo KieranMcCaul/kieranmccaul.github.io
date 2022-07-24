@@ -1,205 +1,202 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap");
-
+/* Reset and Standardising */
 * {
+  /* outline: var(--outline); */
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-repeat: none;
-  background-size: cover;
+  margin: 0vw;
+  padding: 0vw;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.25vw;
   overflow: hidden;
-  height: 100vh;
-  font-family: "poppins", sans-serif;
 }
 
-.container {
-  padding: 20px 70px;
-  color: #fff;
+:root {
+  --darkColour: #333333;
+  --lightColour: #efcb6e;
+  --backColour: #f5f5f5;
+  --outline: 0.2vw solid red;
+  --small: 2vw;
+  --medium: 5vw;
+  --large: 7vw;
+  --half: 50vw;
+  --full: 100vw;
 }
 
-.current-info {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.date-container .time {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  text-shadow: 3px 3px 1px white;
-  color: #3c3c44;
-  font-size: 70px;
-  font-weight: 400;
-}
-
-.date-container #am-pm {
-  font-size: 30px;
-  margin-left: 20px;
-}
-
-.date-container .date {
-  text-shadow: 2px 2px 1px white;
-  color: #3c3c44;
-  font-size: 30px;
-}
-
-.place-container {
-  text-align: end;
-}
-
-.place-container .timezone {
-  text-shadow: 2px 2px 1px white;
-  color: #3c3c44;
-  font-size: 30px;
-  font-weight: 700;
-}
-
-.place-container .country {
-  font-size: 18px;
-  font-weight: 400;
-  color: #3c3c44;
-  text-shadow: 2px 2px 1px white;
-}
-
-.current-info .others {
+#rightText,
+#leftText,
+.nav,
+#background {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  background: rgba(24, 24, 27, 0.5);
-  padding: 20px;
-  border-radius: 10px;
-  margin: 10px 0;
-  border: 1px solid #eee;
+}
+/* --------------------------------- */
+
+/* Main title */
+h1 {
+  font-size: var(--large);
+  width: var(--half);
 }
 
-.current-info .others .weather-items {
-  display: flex;
-  justify-content: space-between;
+h3 {
+  font-size: var(--small);
+  width: var(--half);
 }
 
-.current-info .others .weather-item {
-  display: flex;
-  justify-content: space-between;
+.rightBlackText {
+  color: var(--darkColour);
 }
 
-.future-forecast {
-  background: rgba(24, 24, 27, 0.2);
-  padding: 25px;
-  position: fixed;
-  bottom: 0;
-  display: flex;
-  color: white;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
+#title1,
+#location,
+#name {
+  margin-bottom: var(--small);
 }
 
-.future-forecast .today {
-  min-width:fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 10px;
-  border: 1.75px solid #eee;
-  border-radius: 10px;
-  padding: 15px;
-  background: rgba(24, 24, 27, 0.2);
+#rightText {
+  top: 18vw;
+  left: calc(var(--half) + 1vw);
 }
 
-
-.future-forecast .today .day {
-  padding: 5px 15px;
-  background: #3c3c44;
-  border-radius: 50px;
-  text-align: center;
+#rightText h1 {
+  color: var(--darkColour);
+  text-shadow: 0.5vw 0.5vw 0 var(--lightColour);
+  margin-bottom: var(--small);
 }
 
-.future-forecast .today .temp {
-  font-size: 18px;
-  padding-top: 15px;
+#leftText {
+  text-align: right;
+  color: var(--lightColour);
+  top: 18vw;
+  right: calc(var(--half) + 0.5vw);
+}
+/* --------------------------------- */
+
+/* Backgrounds */
+body {
+  background-color: var(--backColour);
 }
 
-.future-forecast .weather-forecast {
-  display: flex;
+#background {
+  z-index: 0;
+  background-color: var(--darkColour);
+  outline: calc(var(--small) / 4) solid var(--lightColour);
+  width: var(--half);
+  height: var(--full);
+}
+/* --------------------------------- */
+
+/* Navigation */
+.nav {
+  justify-content: space-around;
+  color: var(--darkColour);
+  right: var(--small);
+  height: calc(var(--half) / 2);
 }
 
-.weather-forecast .weather-forecast-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 10px;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  padding: 15px;
-  background: rgba(24, 24, 27, 0.2);
+button {
+  font-size: var(--small);
+  color: var(--darkColour);
+  text-align: right;
+  text-decoration: none;
+  background-color: var(--backColour);
+  border: none;
+  cursor: pointer;
 }
 
-.weather-forecast .weather-forecast-item .day {
-  padding: 5px 15px;
-  background-color: #3c3c44;
-  border-radius: 50px;
-  text-align: center;
+.nav a {
+  opacity: 0;
+  z-index: 1;
+  font-size: var(--small);
+  text-align: right;
+  color: var(--darkColour);
+  text-decoration: none;
+  transform: translateX(-100%);
 }
+/* --------------------------------- */
 
-.weather-forecast .weather-forecast-item .temp {
-  font-size: 12px;
-  font-weight: 400;
-}
-
-@media only screen and (max-width: 730px) {
-  .container {
-    padding: 20px;
+/* Animation */
+@keyframes removeBackground {
+  0% {
+    transform: translateX(0%);
   }
-
-  .future-forecast {
-    justify-content: start;
-    align-items: none;
-    overflow-x: scroll;
+  50% {
+    transform: translateX(-100%);
   }
-
-  .future-forecast .today .temp {
-    font-size: 23px;
-  }
-
-  .date-container .time {
-    font-size: 50px;
-  }
-
-  .date-container #am-pm {
-    font-size: 20px;
-  }
-
-  .date-container .date {
-    font-size: 20px;
-  }
-
-  .place-container {
-    text-align: end;
-    margin-top: 15px;
-  }
-
-  .place-container .time-zone {
-    font-size: 20px;
-  }
-
-  .current-info .others {
-    font-size: 12px;
-  }
-
-  .current-info .others .weather-item {
-    font-size: 14px;
+  100% {
+    transform: translateX(0%);
   }
 }
 
-@media only screen and (max-width:1000px) {
-
-  .future-forecast {
-    justify-content: start;
-    align-items: none;
-    overflow-x: scroll;
+@keyframes moveInBackground {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
+
+@keyframes removeTitle {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes moveInTitle {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes navAnimation {
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+button:focus ~ a {
+  opacity: 1;
+  animation: navAnimation 0.5s linear 0s forwards;
+}
+a:hover,
+button:focus {
+  text-shadow: var(--lightColour) 0.25vw 0.25vw 0;
+}
+
+.textOut {
+  animation: removeTitle 3s linear 0s forwards;
+}
+
+.textIn {
+  animation: moveInTitle 3s linear 0s;
+}
+
+.transitionOut {
+  animation: removeBackground 3s linear 0s;
+}
+.transitionIn {
+  animation: moveInBackground 3s linear 0s;
+}
+/* --------------------------------- */

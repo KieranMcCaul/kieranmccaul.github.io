@@ -4,51 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body id="body">
-    <div class="container">
-      <div class="current-info">
-        <div class="date-container">
-          <div class="time" id="time"><span class="am-pm"></span></div>
-          <div class="date" id="date"></div>
-
-          <div class="others" id="current-weather-items">
-            <div class="weather-item">
-              <div></div>
-              <div></div>
-            </div>
-            <div class="weather-item">
-              <div></div>
-              <div></div>
-            </div>
-            <div class="weather-item">
-              <div></div>
-              <div></div>
-            </div>
-          </div>
-        </div>
-        <div class="place-container">
-          <div class="timezone" id="timezone"></div>
-          <div class="country" id="country"></div>
-        </div>
-      </div>
-    </div>
-    <div class="future-forecast">
-      <div class="today" id="current-temp">
-      </div>
-
-      <div id="weather-forecast" class="weather-forecast">
-        </div>
-      </div>
-    </div>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
-      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="nav">
+      <button>&lt;&sol;&gt;</button>
+      <a href="#" onfocus="transitionOut()" class="bio navlink">Bio</a>
+      <a href="#" onfocus="transitionOut()" class="contact navlink">Contact</a>
+      <a href="#" onfocus="transitionOut()" class="projects navlink"
+        >Projects</a
+      >
+      <a
+        href="#"
+        onfocus="transitionIn(),
+      setTimeout( function refresh() {window.location.reload()}, 3000);"
+        class="home navlink"
+        >Home</a
+      >
+    </div>
+    <div id="background"></div>
+    <section id="leftText">
+      <h3 id="name">Hi, im Kieran</h3>
+      <h1 id="title1">Front End</h1>
+      <h3 id="location">Based in Bath</h3>
+      <h3>Im also a</h3>
+    </section>
+    <section id="rightText">
+      <h1 id="title2">
+        Web <br />
+        Developer
+      </h1>
+      <h3 class="rightBlackText">Food Nerd <br />& Cat Servant</h3>
+    </section>
   </body>
 </html>
